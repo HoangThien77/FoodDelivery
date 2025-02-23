@@ -90,30 +90,13 @@ body {
   width: 100%;
   height: 70px;
   background-color: #ffffff;
-  box-sizing: border-box;
-  opacity: 0;
-  animation: fadeInDown 0.8s ease-out forwards;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1000;
 }
 .navbar .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
-  font-size: 24px;
-}
-.navbar .logo-icon {
-  width: 36px;
   height: 36px;
-  background-color: #FF5D3A;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-right: 12px;
+  width: auto;
 }
 .navbar .nav-links {
   display: flex;
@@ -133,6 +116,38 @@ body {
 .navbar .nav-links a:hover {
   color: #FF5D3A;
 }
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 80px 20px 20px;
+    transition: left 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 98;
+  }
+  .navbar .nav-links.active {
+    left: 0;
+  }
+  .navbar .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .nav-links li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+  }
+  .navbar .nav-links li a:hover {
+    background-color: rgba(255, 93, 58, 0.1);
+  }
+}
 .navbar .auth-buttons {
   display: flex;
   flex-direction: row;
@@ -141,18 +156,15 @@ body {
   gap: 15px;
 }
 .navbar .auth-buttons .sign-up-btn {
+  padding: 12px 20px;
   background-color: #121212;
   color: #ffffff;
   border: none;
   border-radius: 12px;
-  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 14px;
-  line-height: 16.94px;
-  letter-spacing: 0.5%;
-  align-items: center;
-  font-weight: 500;
 }
 .navbar .auth-buttons .sign-up-btn:hover {
   background-color: #000000;
@@ -176,6 +188,20 @@ body {
 .navbar .auth-buttons .cart-btn:hover {
   background-color: #e84c2b;
 }
+@media screen and (max-width: 768px) {
+  .navbar .auth-buttons .sign-up-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .navbar .auth-buttons .cart-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .navbar .auth-buttons .cart-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .navbar .menu-toggle {
   display: none;
   cursor: pointer;
@@ -184,6 +210,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 .navbar .menu-toggle span {
   display: block;
@@ -202,59 +232,40 @@ body {
   transform: rotate(-45deg) translate(8px, -8px);
 }
 @media screen and (max-width: 768px) {
-  .navbar {
-    padding: 0 3%;
-    height: 60px;
-  }
   .navbar .menu-toggle {
     display: flex;
-    margin-left: auto;
-    order: 3;
-  }
-  .navbar .logo {
     order: 1;
   }
-  .navbar .auth-buttons {
-    margin-left: 170px;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .navbar .logo {
     order: 2;
-  }
-  .navbar .auth-buttons .sign-up-btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-  .navbar .auth-buttons .cart-btn {
-    width: 30px;
     height: 30px;
   }
-  .navbar .nav-links {
-    position: fixed;
-    top: 100px;
-    right: -100%;
-    left: auto;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #ffffff;
-    padding: 20px;
-    transition: 0.3s ease;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  .navbar .auth-buttons {
+    order: 3;
   }
-  .navbar .nav-links.active {
-    right: 0;
-  }
-  .navbar .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar .nav-links li a {
-    display: block;
-    padding: 15px 0;
-  }
-  .navbar .nav-links li a:hover {
-    background-color: rgba(255, 93, 58, 0.1);
-  }
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 97;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
 }
 
 .content-section {
@@ -321,6 +332,11 @@ body {
   #panel .panel_title .sign-in {
     flex-direction: column;
     gap: 10px;
+    margin-left: 20px;
+  }
+  #panel .panel-img img {
+    height: auto;
+    width: 90%;
   }
   #panel .search-container {
     width: 100%;
@@ -804,7 +820,7 @@ body {
   #content-2 .sales .sale-container .sale-right .soup-bowl2 {
     width: 80px;
     height: 60px;
-    right: 60px;
+    right: 30px;
   }
 }
 #content-2 .sales .sale-container .sale-right .steam {
@@ -1019,8 +1035,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   #content-4 .newarme-container .circle-1 {
-    top: 8%;
-    left: 35%;
+    top: 12%;
+    left: 5%;
     height: 60px;
     width: 60px;
   }

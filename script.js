@@ -1,16 +1,28 @@
 $(document).ready(function() {
-    // ===== Menu Toggle Functionality =====
+    // Menu Toggle Functionality
     $('.menu-toggle').click(function(e) {
-        e.stopPropagation();
+        e.preventDefault();
         $(this).toggleClass('active');
         $('.nav-links').toggleClass('active');
+        $('.menu-overlay').toggleClass('active');
+        $('body').toggleClass('menu-open');
     });
 
+    $('.menu-overlay, .nav-links a').click(function() {
+        $('.menu-toggle').removeClass('active');
+        $('.nav-links').removeClass('active');
+        $('.menu-overlay').removeClass('active');
+        $('body').removeClass('menu-open');
+    });
+
+    // Đóng menu khi click vào links
     $('.nav-links a').click(function() {
         $('.menu-toggle').removeClass('active');
         $('.nav-links').removeClass('active');
+        $('.menu-overlay').removeClass('active');
     });
 
+    // Đóng menu khi click ra ngoài
     $(document).click(function(event) {
         const $navbar = $('.navbar');
         const $menuToggle = $('.menu-toggle');
@@ -21,6 +33,7 @@ $(document).ready(function() {
             $navLinks.hasClass('active')) {
             $menuToggle.removeClass('active');
             $navLinks.removeClass('active');
+            $('.menu-overlay').removeClass('active');
         }
     });
 
