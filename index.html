@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css"> <!-- Assuming compiled SCSS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <title>Besnik - Trang chủ</title>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/Logo.png" alt="logo" class="logo">
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Review</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="sign-up-btn">Sign Up</button>
+            <button class="cart-btn">
+                <img src="images/Icon.svg" alt="">
+            </button>
+        </div>
+    </nav>
+    <main>
+        <div id="panel" class="content-section">
+            <div class="panel_title">
+                <h1>Hungry?</h1>
+                <h2>Wait a minute for delicious.</h2>
+                <p>Best cooks and best delivery guys all at your service. <br>Hot tasty food will reach you in 20mins.</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your delivery location" class="search-input">
+                    <button class="location-btn">
+                        <img src="images/IconCham.svg" alt="">
+                    </button>
+                    <div class="discover-btn-container">
+                        <button class="discover-btn">
+                            <span class="discorver">Discover</span>
+                            <span class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BE4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sign-in">
+                    <p>Already member of our community?</p>
+                    <p><a href="#">Sign in</a></p>
+                </div>
+            </div>
+            <div class="panel-img">
+                <img src="images/Content.png" alt="Content">
+                <div class="shape"></div>
+            </div>
+        </div>
+
+        <div id="categories" class="content-section">
+            <div class="categories-title">
+                <h1>Food near me <img src="images/Icon Fire.svg" alt="Fire"></h1>
+                <div class="navigation-buttons">
+                    <button class="nav-button prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="nav-button next active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="category-container">
+                <div class="category">
+                    <ul class="item1">
+                        <h2>Pizza</h2>
+                        <li><p>Starting</p><p>$14.00</p></li>
+                    </ul>
+                    <img src="images/pizza1.png" width="124" height="124" alt="Pizza">
+                </div>
+                <div class="category">
+                    <ul class="item2">
+                        <h2>Drinks</h2>
+                        <li><p>Starting</p><p>$2.00</p></li>
+                    </ul>
+                    <img src="images/drinks.png" width="120" height="126" alt="Drinks">
+                </div>
+                <div class="category">
+                    <ul class="item3">
+                        <h2>F. Chicken</h2>
+                        <li><p>Starting</p><p>$4.00</p></li>
+                    </ul>
+                    <img src="images/chiken1.png" width="129" height="87" alt="F Chicken" style="transform: rotate(90deg);">
+                </div>
+                <div class="category">
+                    <ul class="item4">
+                        <h2>French F</h2>
+                        <li><p>Starting</p><p>$8.00</p></li>
+                    </ul>
+                    <img src="images/French F 1.png" width="112" height="154" alt="French Fries">
+                </div>
+                <div class="category">
+                    <ul class="item4">
+                        <h2>French F</h2>
+                        <li><p>Starting</p><p>$8.00</p></li>
+                    </ul>
+                    <img src="images/French F 1.png" width="112" height="154" alt="French Fries">
+                </div>
+                <div class="category">
+                    <ul class="item4">
+                        <h2>French F</h2>
+                        <li><p>Starting</p><p>$8.00</p></li>
+                    </ul>
+                    <img src="images/French F 1.png" width="112" height="154" alt="French Fries">
+                </div>
+                <div class="category">
+                    <ul class="item4">
+                        <h2>French F</h2>
+                        <li><p>Starting</p><p>$8.00</p></li>
+                    </ul>
+                    <img src="images/French F 1.png" width="112" height="154" alt="French Fries">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="content-2">
+            <div class="content-title">
+                <h1>Hungry?</h1>
+                <h2>Wait a minute for<br>delicious.</h2>
+            </div>
+            <div class="features">
+                <div class="feature-item">
+                    <img src="images/Iconform.svg" alt="Easy to order">
+                    <h3>Easy to order</h3>
+                    <p>In restaurant-controlled online food ordering, the restaurant ..</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/Iconlocated.svg" alt="Live Order">
+                    <h3>Live Order</h3>
+                    <p>In addition to paying for the food, customers will often have to pay ..</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/IconBestQuality.svg" alt="Best Quality">
+                    <h3>Best Quality</h3>
+                    <p>Grocery delivery companies will deliver groceries, pre-prep ..</p>
+                </div>
+            </div>
+            <div class="sales">
+                <div class="sale-container">
+                    <div class="sale-left">
+                        <h1>Have you got our offer?</h1>
+                        <p>Best cooks and best delivery guys all at your service. Hot tasty food</p>
+                    </div>
+                    <div class="sale-right">
+                        <div class="discount">50% <p>off</p></div>
+                        <img src="images/Iconsoup2.2.svg" alt="Soup" class="soup-bowl">
+                        <img src="images/Iconsoup1.1.svg" alt="Pot" class="soup-pot">
+                        <img src="images/Iconsoup3.1.svg" alt="Bowl" class="soup-bowl2">
+                        <div class="steam steam1"><img src="images/Abstract.svg" alt=""></div>
+                        <div class="steam steam2"><img src="images/Abstract2.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="content-3">
+            <div class="content-title">
+                <h1>Popular Menu</h1>
+                <h2>Wait a minute for<br>delicious.</h2>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/box-1.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>New York-Style pizza</h2>
+                    <p>Lorem Ipsum Lorem Ipsum is simply and dummy text of the printing.</p>
+                    <div class="footer-box">
+                        <span class="price">$7.10</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" id="box2">
+                    <img src="images/box-2.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>Bento Ekiben Makunchi ..</h2>
+                    <p>Lorem Ipsum Lorem Ipsum is simply and dummy text of the printing.</p>
+                    <div class="footer-box">
+                        <span class="price">$6.40</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/box-3.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>Humburger Veggei ..</h2>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <div class="footer-box">
+                        <span class="price">$4.80</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/box-4.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>New York-Style pizza</h2>
+                    <p>Lorem Ipsum is simply dummy text.</p>
+                    <div class="footer-box">
+                        <span class="price">$7.10</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/box-5.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>New York-Style pizza</h2>
+                    <p>Lorem Ipsum is simply dummy text.</p>
+                    <div class="footer-box">
+                        <span class="price">$7.10</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/box-6.png" alt="">
+                    <div class="stars">★★★★★</div>
+                    <h2>New York-Style pizza</h2>
+                    <p>Lorem Ipsum is simply dummy text.</p>
+                    <div class="footer-box">
+                        <span class="price">$7.10</span>
+                        <div class="icons">
+                            <button class="heart rounded-button" id="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </button>
+                            <button class="share rounded-button" id="share">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <button class="see-all-btn">
+                    <span class="see-all-text">See All Menu</span>
+                    <span class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BE4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="content-section" id="content-4">
+            <div class="content-title">
+                <h1>Near Me</h1>
+                <h2>Find us near your<br>citys.</h2>
+            </div>
+            <div class="newarme-layout-wrapper">
+                <div class="newarme-container">
+                    <div class="circle-1">
+                        <div class="circle-2">
+                            <span>10m.</span>
+                        </div>
+                    </div>
+                    <div class="Pickup">
+                        <h2>Pickup restaurant point</h2>
+                        <p>Enter your delivery location</p>
+                    </div>
+                    <div class="Depature">
+                        <p class="newarme-title">DEPATURE</p>
+                        <p class="newarme-title2">Pickup restaurant point</p>
+                        <div class="input-container">
+                            <input type="text" placeholder="427 Edington Drive" />
+                            <span class="icon">
+                                <img src="images/chamdo.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="Arrive">
+                        <p class="newarme-title">ARRIVE</p>
+                        <p class="newarme-title2">Drop home location</p>
+                        <div class="input-container">
+                            <input type="text" placeholder="427 Edington Drive" />
+                            <span class="icon">
+                                <img src="images/chamdo.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-section">
+                    <div class="time-indicator">
+                        <img src="images/map.png" width="450" height="590" alt="">
+                    </div>
+                    <div class="location-container">
+                        <div class="location-pin" style="width: 30px; height: 30px; top: 32%; left: 30%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="11" height="11" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 20px; height: 20px; top: 30%; left: 60%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="30" height="30" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 48px; height: 48px; top: 44%; left: 24%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="30" height="30" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 42px; height: 42px; top: 65%; left: 26%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="10" height="8" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 70px; height: 70px; top: 50%; left: 52%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="25.67" height="21.72" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 40px; height: 40px; top: 55%; left: 72%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="10" height="8" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-pin" style="width: 20px; height: 20px; top: 68%; left: 63%;">
+                            <div class="pin-outer">
+                                <div class="pin-inner">
+                                    <img src="images/delivery-bike 1.svg" width="14" height="12" alt="Delivery Bike">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="content-5">
+            <div class="content-title">
+                <h1>Near Me</h1>
+                <h2>Our regular updated<br>new blogs.</h2>
+                <p>Best cooks and best delivery guys all at your service. Hot<br>tasty food will reach you in 20mins.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card__image" style="background-color: #E4F3F8;">
+                        <img src="images/driver.png" alt="Delivery rider on scooter">
+                    </div>
+                    <div class="card__content" id="card__content1">
+                        <h3 class="card__title">Riders</h3>
+                        <p class="card__text">We store the vast majority of the digital assets in secure..</p>
+                        <div class="menu-btn">
+                            <button class="see-all-btn green-btn">
+                                <span class="see-all-text">Apply Now</span>
+                                <span class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image" id="card__content1">
+                        <img src="images/BlogFood.png" alt="Food dishes and Bolt Food logo">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Restaurants</h3>
+                        <p class="card__text">We store the vast majority of the digital assets in secure..</p>
+                        <div class="menu-btn">
+                            <button class="see-all-btn red-btn">
+                                <span class="see-all-text">Apply Now</span>
+                                <span class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image" id="card__content1">
+                        <img src="images/BlogLove.png" alt="Hands holding heart illustration">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Community</h3>
+                        <p class="card__text">We store the vast majority of the digital assets in secure..</p>
+                        <div class="menu-btn">
+                            <button class="see-all-btn yellow-btn">
+                                <span class="see-all-text">Apply Now</span>
+                                <span class="icon-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="content-6">
+            <div class="iphone-container">
+                <div class="iphone-frame">
+                    <img src="images/Phone.jpeg" alt="Food delivery app interface" class="app-screenshot">
+                </div>
+                <div class="power-button"></div>
+                <div class="volume-buttons">
+                    <div class="volume-up"></div>
+                    <div class="volume-down"></div>
+                </div>
+            </div>
+            <div class="App-phone">
+                <div class="app-container">
+                    <h2>Have you got our App?</h2>
+                    <p>Best cooks and best delivery guys all at your service. Hot tasty food</p>
+                    <div class="app-icon">
+                        <a href="#" class="app-button">
+                            <img src="images/appstore.svg" alt="App Store">
+                            <span>App Store</span>
+                        </a>
+                        <a href="#" class="app-button">
+                            <img src="images/chplay.svg" alt="Play Store">
+                            <span>Play Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subcribe">
+            <div class="subcribe-container">
+                <div class="subcribe-left">
+                    <h1>Subscribe newsletter</h1>
+                    <p>Best cooks and best delivery guys all at your service. Hot tasty food</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your delivery location" class="search-input">
+                    <div class="discover-btn-container">
+                        <button class="discover-btn">
+                            <span class="discorver">Discover</span>
+                            <span class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BE4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="countries-container">
+            <h2 class="countries-title">Popular countries with us</h2>
+            <div class="countries-grid">
+                <div class="countries-column">
+                    <span>United States</span>
+                    <span>Spain</span>
+                    <span>Brazil</span>
+                    <span>Mexico</span>
+                    <span>Japan</span>
+                </div>
+                <div class="countries-column">
+                    <span>Canada</span>
+                    <span>Australia</span>
+                    <span>Poland</span>
+                    <span>United Kingdom</span>
+                    <span>Italy</span>
+                </div>
+                <div class="countries-column">
+                    <span>Switzerland</span>
+                    <span>Chile</span>
+                    <span>New Zealand</span>
+                    <span>Tiwan (ROC)</span>
+                    <span>South Africa</span>
+                </div>
+                <div class="countries-column">
+                    <span>Ecuador</span>
+                    <span>Ireland</span>
+                    <span>Sri Lanka</span>
+                    <span>Dominican Republic</span>
+                    <span>Sweden</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="images/Logo.png" alt="Besnik">
+                </div>
+                <p class="description">
+                    Retail food delivery is a courier service in which a restaurant, store, or independent food-delivery
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="icon-link"><img src="images/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="icon-link"><img src="images/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="icon-link"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <div class="nav-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Support Carrer</a></li>
+                        <li><a href="#">24h Service</a></li>
+                        <li><a href="#">Quick Chat</a></li>
+                    </ul>
+                </div>
+                <div class="nav-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Policy</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <div class="nav-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Support 24</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2021 Besnik.com</p>
+            <p>Created by <span>Besnik</span></p>
+        </div>
+    </footer>
+</body>
+</html>
