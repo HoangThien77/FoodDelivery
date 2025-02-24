@@ -82,6 +82,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     scroll-behavior: smooth;
+    overflow-x: hidden; // Ngăn lướt ngang dư thừa trên mobile
 }
 
 // Animation Keyframes
@@ -166,14 +167,13 @@ body {
 .navbar {
     @include flex(row, space-between, center);
     width: 100%;
+    max-width: 100%; // Đảm bảo không vượt viewport
     height: 70px;
     background-color: $color-white;
     padding: 0 20px;
-    position: relative;
-    z-index: 1000;
     position: sticky;
     top: 0;
-
+    z-index: 1000;
 
     .logo {
         @include flex(row, flex-start, center);
@@ -367,13 +367,14 @@ body {
     margin-top: 120px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
 
     &.visible {
         opacity: 1;
     }
 
     .content-title {
-
         h1,
         h2 {
             text-align: center;
@@ -406,6 +407,8 @@ body {
 #panel {
     @include flex(row, center, flex-start, 20px);
     margin-top: 26px;
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -433,7 +436,7 @@ body {
             .sign-in {
                 flex-direction: column;
                 gap: 10px;
-                margin-left: 20px;
+                margin-left: 0; // Sửa lại để không bị tràn
             }
         }
 
@@ -441,6 +444,7 @@ body {
             img {
                 height: auto;
                 width: 90%;
+                max-width: 100%; // Đảm bảo hình không vượt viewport
             }
         }
 
@@ -521,6 +525,10 @@ body {
         background-color: $color-white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
+        @media screen and (max-width: 768px) {
+            max-width: 100%; // Đảm bảo không vượt viewport trên mobile
+        }
+
         .search-input {
             flex: 1;
             border: none;
@@ -574,6 +582,8 @@ body {
 // Categories
 #categories {
     margin-top: 70.95px;
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
 
     @media screen and (max-width: 768px) {
         .categories-title {
@@ -677,6 +687,11 @@ body {
         gap: 20px;
         margin-top: 65px;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .category {
             display: flex;
             align-items: center;
@@ -701,7 +716,6 @@ body {
                 color: #222;
                 white-space: nowrap;
             }
-
 
             li {
                 list-style-type: none;
@@ -738,6 +752,9 @@ body {
 
 // Content-2
 #content-2 {
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
+
     .features {
         @include flex(row, space-between, center, 100px);
         padding: 30px 190px;
@@ -816,6 +833,7 @@ body {
             @media screen and (max-width: 768px) {
                 height: 180px;
                 flex-direction: column;
+                max-width: 100%; // Đảm bảo không vượt viewport
             }
 
             .sale-left {
@@ -978,6 +996,9 @@ body {
 
 // Content-3
 #content-3 {
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
+
     .box-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -996,6 +1017,7 @@ body {
 
         @media screen and (max-width: 768px) {
             grid-template-columns: 1fr;
+            padding: 0 15px; // Giảm padding để vừa viewport
         }
 
         #box2 {
@@ -1038,8 +1060,6 @@ body {
                 color: #ffd700;
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
-                width: 102px;
-                height: 22px;
             }
 
             h2 {
@@ -1143,6 +1163,9 @@ body {
 
 // Content-4
 #content-4 {
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
+
     .newarme-layout-wrapper {
         display: flex;
         width: 100%;
@@ -1169,6 +1192,7 @@ body {
         @media screen and (max-width: 768px) {
             flex-direction: column;
             padding: 2rem;
+            max-width: 100%; // Đảm bảo không vượt viewport
         }
 
         .circle-1 {
@@ -1436,6 +1460,8 @@ body {
 // Content-5
 #content-5 {
     margin-top: 80px;
+    width: 100%; // Đảm bảo không vượt viewport
+    max-width: 100%;
 
     .content-title {
         p {
@@ -1464,6 +1490,10 @@ body {
 
         @media (min-width: $breakpoint-lg) {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 15px; // Giảm padding để vừa viewport
         }
     }
 
@@ -1643,6 +1673,7 @@ body {
         gap: 4rem;
         margin-top: 80px;
         padding: 0 10px;
+        max-width: 100%; // Đảm bảo không vượt viewport
     }
 
     @media (max-width: 480px) {
@@ -1914,6 +1945,7 @@ body {
         @media screen and (max-width: 768px) {
             height: 180px;
             flex-direction: column;
+            max-width: 100%; // Đảm bảo không vượt viewport
         }
 
         .subcribe-left {
@@ -1984,16 +2016,12 @@ body {
             background-color: $color-white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
+            @media (max-width: 768px) {
+                max-width: 100%; // Đảm bảo không vượt viewport
+            }
+
             @media (max-width: 480px) {
                 margin-top: -40px;
-                display: flex;
-                max-width: 464px;
-                height: 64px;
-                border-radius: 16px;
-                border: none;
-                overflow: hidden;
-                background-color: $color-white;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             }
 
             .search-input {
@@ -2003,6 +2031,10 @@ body {
                 font-size: 14px;
                 width: 307px;
                 outline: none;
+
+                @media (max-width: 768px) {
+                    width: auto; // Linh hoạt để vừa viewport
+                }
             }
 
             .location-btn {
@@ -2054,6 +2086,7 @@ body {
     padding: 20px;
     margin-bottom: 100px;
     box-sizing: border-box;
+    width: 100%; // Đảm bảo không vượt viewport
 
     .countries-title {
         width: 416px;
@@ -2064,6 +2097,10 @@ body {
         font-weight: 700;
         margin-bottom: 42px;
         color: $color-text-dark;
+
+        @media screen and (max-width: 768px) {
+            width: 100%; // Linh hoạt để vừa viewport
+        }
     }
 
     .countries-grid {
@@ -2108,12 +2145,18 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     background-color: #F8F8F8;
+    width: 100%; // Đảm bảo không vượt viewport
 
     &-container {
         display: flex;
         justify-content: space-between;
         gap: 100px;
         padding: 0 20px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     &-brand {
@@ -2170,7 +2213,6 @@ body {
 
         .nav-column {
             min-width: 120px;
-
 
             h4 {
                 color: #030000;
