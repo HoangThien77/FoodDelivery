@@ -160,6 +160,9 @@ body {
     padding: 0 20px;
     position: relative;
     z-index: 1000;
+    position: sticky;
+    top: 0;
+
 
     .logo {
         @include flex(row, flex-start, center);
@@ -261,7 +264,7 @@ body {
             .cart-btn {
                 width: 32px;
                 height: 32px;
-                
+
                 img {
                     width: 20px;
                     height: 20px;
@@ -309,20 +312,20 @@ body {
 
         @media screen and (max-width: 768px) {
             display: flex;
-            order: 1; 
+            order: 1;
         }
     }
 
     @media screen and (max-width: 768px) {
         height: 60px;
         padding: 0 15px;
-        
+
         // Reorder elements
         .logo {
             order: 2;
             height: 30px;
         }
-        
+
         .auth-buttons {
             order: 3;
         }
@@ -423,8 +426,8 @@ body {
             }
         }
 
-        .panel-img{
-            img{
+        .panel-img {
+            img {
                 height: auto;
                 width: 90%;
             }
@@ -459,6 +462,7 @@ body {
         display: grid;
         gap: 20px;
         padding-top: 30px;
+        margin-left: 20px;
 
         h1 {
             font-family: $font-script;
@@ -683,7 +687,7 @@ body {
             padding: 15px 22px;
             width: 280px;
             height: 120px;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
             opacity: 0;
 
             &.visible {
@@ -696,7 +700,9 @@ body {
                 font-weight: bold;
                 margin: 0 0 10px 0;
                 color: #222;
+                white-space: nowrap;
             }
+
 
             li {
                 list-style-type: none;
@@ -725,7 +731,7 @@ body {
             }
 
             &:hover {
-                transform: translateY(-5px);
+                transform: translateY(-5px) !important;
             }
         }
     }
@@ -983,6 +989,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
+        padding: 0 20px;
 
         @media screen and (max-width: 1024px) {
             grid-template-columns: repeat(2, 1fr);
@@ -990,7 +997,6 @@ body {
 
         @media screen and (max-width: 768px) {
             grid-template-columns: 1fr;
-            padding: 0 20px;
         }
 
         #box2 {
@@ -1002,11 +1008,13 @@ body {
             background: $color-white;
             border: 1.2px solid $color-boder-box;
             border-radius: 24px;
+            width: 100%;
             max-width: 370px;
             height: 410px;
             padding: 1.5rem;
             box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            margin: 0 auto;
             opacity: 0;
 
             &.visible {
@@ -1016,6 +1024,7 @@ body {
 
             &:hover {
                 transform: translateY(-5px) !important;
+                box-shadow: 0px 12px 20px $color-gray-box;
             }
 
             img {
@@ -1138,11 +1147,6 @@ body {
         width: 100%;
         position: relative;
         padding: 5rem;
-
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-            padding: 2rem;
-        }
     }
 
     .newarme-container {
@@ -1150,6 +1154,16 @@ body {
         max-width: 58%;
         padding-top: 3rem;
         padding-left: 9.3rem;
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            padding: 2rem;
+        }
 
         .circle-1 {
             position: absolute;
@@ -1162,6 +1176,11 @@ body {
             align-items: center;
             top: 15%;
             left: 44%;
+
+            @media screen and (max-width: 1024px) {
+                top: 22%;
+                left: 35%;
+            }
 
             @media screen and (max-width: 768px) {
                 top: 5%;
@@ -2123,10 +2142,12 @@ body {
             min-width: 120px;
 
             h4 {
-                color: $color-text-dark;
-                font-size: 16px;
-                font-weight: 600;
+                color: #030000;
                 margin-bottom: 24px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: 0%;
             }
 
             ul {
@@ -2142,10 +2163,13 @@ body {
                     }
 
                     a {
-                        color: $color-text-gray;
-                        font-size: 14px;
+                        color: #666666;
                         text-decoration: none;
                         transition: color 0.2s ease;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16.94px;
+                        letter-spacing: -1%;
 
                         &:hover {
                             color: $color-text-dark;
