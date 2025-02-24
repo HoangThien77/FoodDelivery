@@ -375,6 +375,7 @@ body {
     }
 
     .content-title {
+
         h1,
         h2 {
             text-align: center;
@@ -1731,13 +1732,13 @@ body {
                 width: 150px;
                 height: 20px;
                 background: #000;
-                border-bottom-left-radius: 20px;
-                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px;
                 z-index: 2;
 
                 @media (max-width: 768px) {
-                    width: 120px;
-                    height: 16px;
+                    width: 100px;
+                    height: 14px;
                 }
             }
 
