@@ -1014,6 +1014,12 @@ body {
   position: relative;
   padding: 5rem;
 }
+@media screen and (max-width: 768px) {
+  #content-4 .newarme-layout-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
 #content-4 .newarme-container {
   flex: 1;
   max-width: 58%;
@@ -1046,8 +1052,8 @@ body {
 }
 @media screen and (max-width: 1024px) {
   #content-4 .newarme-container .circle-1 {
-    top: 22%;
-    left: 35%;
+    top: 23%;
+    left: 34%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1060,10 +1066,10 @@ body {
 }
 @media screen and (max-width: 480px) {
   #content-4 .newarme-container .circle-1 {
-    top: 12%;
-    left: 5%;
-    height: 60px;
-    width: 60px;
+    top: 10%;
+    left: 70%;
+    height: 100px;
+    width: 100px;
   }
 }
 #content-4 .newarme-container .circle-2 {
@@ -1091,8 +1097,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   #content-4 .newarme-container .circle-2 {
-    height: 40px;
-    width: 40px;
+    height: 70px;
+    width: 70px;
   }
 }
 #content-4 .newarme-container .circle-2 span {
@@ -1107,7 +1113,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   #content-4 .newarme-container .circle-2 span {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
 #content-4 .newarme-container .circle-1:not(.svg-version)::before {
@@ -1129,9 +1135,9 @@ body {
 }
 @media screen and (max-width: 480px) {
   #content-4 .newarme-container .circle-1:not(.svg-version)::before {
-    width: 40px;
-    height: 40px;
-    border-width: 3px;
+    width: 60px;
+    height: 60px;
+    border-width: 12px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1225,9 +1231,25 @@ body {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 480px) {
+  #content-4 .time-indicator {
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
 #content-4 .time-indicator img {
   opacity: 0.5;
   border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 480px) {
+  #content-4 .time-indicator img {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 #content-4 .map-section {
   position: relative;
