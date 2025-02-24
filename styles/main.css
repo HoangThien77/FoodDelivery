@@ -923,6 +923,8 @@ body {
   color: #ffd700;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  width: 102px;
+  height: 22px;
 }
 #content-3 .box-container .box h2 {
   font-size: 1.3rem;
@@ -1678,8 +1680,13 @@ body {
 }
 @media (max-width: 768px) {
   #content-6 .app-container .app-icon {
-    flex-direction: column;
     align-items: center;
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  #content-6 .app-container .app-icon {
+    justify-content: center;
     gap: 15px;
   }
 }
@@ -1761,6 +1768,14 @@ body {
     text-align: center;
   }
 }
+@media screen and (max-width: 480px) {
+  .subcribe .subcribe-container .subcribe-left {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    margin-top: -20px;
+  }
+}
 .subcribe .subcribe-container .subcribe-left h1 {
   font-size: 34px;
   font-weight: 700;
@@ -1814,6 +1829,19 @@ body {
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 480px) {
+  .subcribe .subcribe-container .search-container {
+    margin-top: -40px;
+    display: flex;
+    max-width: 464px;
+    height: 64px;
+    border-radius: 16px;
+    border: none;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
 }
 .subcribe .subcribe-container .search-container .search-input {
   flex: 1;

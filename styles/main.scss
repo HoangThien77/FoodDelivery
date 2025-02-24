@@ -1038,6 +1038,8 @@ body {
                 color: #ffd700;
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
+                width: 102px;
+                height: 22px;
             }
 
             h2 {
@@ -1841,8 +1843,12 @@ body {
             gap: 22px;
 
             @media (max-width: 768px) {
-                flex-direction: column;
                 align-items: center;
+                gap: 15px;
+            }
+
+            @media (max-width: 480px) {
+                justify-content: center;
                 gap: 15px;
             }
 
@@ -1924,6 +1930,13 @@ body {
                 text-align: center;
             }
 
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                padding: 40px;
+                text-align: center;
+                margin-top: -20px;
+            }
+
             h1 {
                 @include text-style(34px, 700, 40px, $color-white, -0.01em);
                 margin-bottom: 16px;
@@ -1970,6 +1983,18 @@ body {
             overflow: hidden;
             background-color: $color-white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+            @media (max-width: 480px) {
+                margin-top: -40px;
+                display: flex;
+                max-width: 464px;
+                height: 64px;
+                border-radius: 16px;
+                border: none;
+                overflow: hidden;
+                background-color: $color-white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
 
             .search-input {
                 flex: 1;
